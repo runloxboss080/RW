@@ -1,0 +1,62 @@
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.episode-card {
+  display: flex;
+  background: #181820;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.episode-card:hover {
+  transform: scale(1.02);
+}
+
+.episode-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.episode-info {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.episode-info h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.episode-info p {
+  margin: 6px 0 0;
+  font-size: .85rem;
+  color: #a0a0b5;
+}
+
+@media (max-width: 600px) {
+  .episode-card {
+    flex-direction: column;
+  }
+
+  .episode-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.season-title {
+  font-size: 1.6rem;
+  margin: 30px 0 10px;
+  color: #ff6b6b;
+  font-weight: 700;
+}

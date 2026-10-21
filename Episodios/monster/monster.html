@@ -1,0 +1,194 @@
+<!-- Enlace al archivo de estilos CSS -->
+<link rel="stylesheet" href="/Episodios/monster/monster.css">
+
+<!-- Banner superior decorativo -->
+<div class="episode-banner" style="background-image: url('Imagenes/banner-monster.jpg');"></div>
+
+<div class="episode-container">
+    <!-- Botón Volver -->
+    <a class="back-btn" onclick="cargarPantalla('catalogo')">← Volver al catálogo</a>
+
+    <!-- CABECERA CONFIGURADA CON EL ÍNDICE TEMPORAL -->
+    <div class="episode-header-wrapper">
+        <h1 class="episode-title">Monster</h1>
+        
+        <!-- 🌟 EL DESPLEGABLE DE ARCOS ARGUMENTALES -->
+        <div class="season-select-wrapper">
+            <select id="seasonDropdownSelector" onchange="const target = document.getElementById(this.value); if(target) target.scrollIntoView({ behavior: 'smooth' });">
+                <option value="" disabled selected hidden>Arcos de la Historia</option>
+                <option value="arco1">Capítulos 1-24: El Comienzo y la Huida</option>
+                <option value="arco2">Capítulos 25-39: El Bosque de Munich</option>
+                <option value="arco3">Capítulos 40-50: Las Huellas del Monstruo</option>
+                <option value="arco4">Capítulos 51-67: La Biblioteca y la Masacre</option>
+                <option value="arco5">Capítulos 68-74: Ruhenheim (Arco Final)</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 🌟 ANCLAJE DEL ARCO 1 🌟 -->
+    <div id="arco1" class="season-anchor-point"></div>
+
+    <!-- El cartel de "Arco 1" -->
+    <div class="season-separator-card">
+        <h2>El Comienzo y la Huida</h2>
+        <div class="separator-line"></div>
+    </div>
+
+    <!-- Lista de Capítulos -->
+    <div class="episode-list">
+        
+        <!-- Episodio 1 -->
+        <div class="episode-item" id="btnEpisodio1" data-video="/Episodios/monster/Ep1.mp4">
+            <img src="/Episodios/monster/ep1.webp" alt="Episodio 1" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 1</h3>
+                <p>El doctor Tenma</p>
+            </div>
+        </div>
+
+        <!-- Episodio 2 -->
+        <div class="episode-item" id="btnEpisodio2" data-video="/Episodios/monster/Ep2.mp4">
+            <img src="/Episodios/monster/ep2.webp" alt="Episodio 2" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 2</h3>
+                <p>Destino</p>
+            </div>
+        </div>
+
+        <!-- Episodio 3 -->
+        <div class="episode-item" id="btnEpisodio3" data-video="/Episodios/monster/Ep3.mp4">
+            <img src="/Episodios/monster/ep3.webp" alt="Episodio 3" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 3</h3>
+                <p>Asesinato en serie</p>
+            </div>
+        </div>
+
+        <!-- Episodio 4 -->
+        <div class="episode-item" id="btnEpisodio4" data-video="/Episodios/monster/Ep4.mp4">
+            <img src="/Episodios/monster/ep4.webp" alt="Episodio 4" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 4</h3>
+                <p>La noche de la ejecución</p>
+            </div>
+        </div>
+
+        <!-- Episodio 5 -->
+        <div class="episode-item" id="btnEpisodio5" data-video="/Episodios/monster/Ep5.mp4">
+            <img src="/Episodios/monster/ep5.webp" alt="Episodio 5" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 5</h3>
+                <p>La chica de Heidelberg</p>
+            </div>
+        </div>
+
+        <!-- Episodio 6 -->
+        <div class="episode-item" id="btnEpisodio6" data-video="/Episodios/monster/Ep6.mp4">
+            <img src="/Episodios/monster/ep6.webp" alt="Episodio 6" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 6</h3>
+                <p>Artículos de desaparición</p>
+            </div>
+        </div>
+
+        <!-- Episodio 7 -->
+        <div class="episode-item" id="btnEpisodio7" data-video="/Episodios/monster/Ep7.mp4">
+            <img src="/Episodios/monster/ep7.webp" alt="Episodio 7" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 7</h3>
+                <p>Mansión de la decadencia</p>
+            </div>
+        </div>
+
+        <!-- Episodio 8 -->
+        <div class="episode-item" id="btnEpisodio8" data-video="/Episodios/monster/Ep8.mp4">
+            <img src="/Episodios/monster/ep8.webp" alt="Episodio 8" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 8</h3>
+                <p>La vista del lobo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 9 -->
+        <div class="episode-item" id="btnEpisodio9" data-video="/Episodios/monster/Ep9.mp4">
+            <img src="/Episodios/monster/ep9.webp" alt="Episodio 9" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 9</h3>
+                <p>El asesino anciano y la niña</p>
+            </div>
+        </div>
+
+        <!-- Episodio 10 -->
+        <div class="episode-item" id="btnEpisodio10" data-video="/Episodios/monster/Ep10.mp4">
+            <img src="/Episodios/monster/ep10.webp" alt="Episodio 10" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 10</h3>
+                <p>Borrado de pasado</p>
+            </div>
+        </div>
+
+        <!-- Episodio 11 -->
+        <div class="episode-item" id="btnEpisodio11" data-video="/Episodios/monster/Ep11.mp4">
+            <img src="/Episodios/monster/ep11.webp" alt="Episodio 11" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 11</h3>
+                <p>El Kinderheim 511</p>
+            </div>
+        </div>
+
+        <!-- Episodio 12 -->
+        <div class="episode-item" id="btnEpisodio12" data-video="/Episodios/monster/Ep12.mp4">
+            <img src="/Episodios/monster/ep12.webp" alt="Episodio 12" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 12</h3>
+                <p>Un experimento insignificante</p>
+            </div>
+        </div>
+
+        <!-- Episodio 13 -->
+        <div class="episode-item" id="btnEpisodio13" data-video="/Episodios/monster/Ep13.mp4">
+            <img src="/Episodios/monster/ep13.webp" alt="Episodio 13" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 13</h3>
+                <p>Petra y Schuman</p>
+            </div>
+        </div>
+
+        <!-- Episodio 14 -->
+        <div class="episode-item" id="btnEpisodio14" data-video="/Episodios/monster/Ep14.mp4">
+            <img src="/Episodios/monster/ep14.webp" alt="Episodio 14" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 14</h3>
+                <p>El hombre abandonado, la mujer abandonada</p>
+            </div>
+        </div>
+
+        <!-- Episodio 15 -->
+        <div class="episode-item" id="btnEpisodio15" data-video="/Episodios/monster/Ep15.mp4">
+            <img src="/Episodios/monster/ep15.webp" alt="Episodio 15" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 15</h3>
+                <p>Be My Baby</p>
+            </div>
+        </div>
+
+        <!-- Episodio 16 -->
+        <div class="episode-item" id="btnEpisodio16" data-video="/Episodios/monster/Ep16.mp4">
+            <img src="/Episodios/monster/ep16.webp" alt="Episodio 16" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 16</h3>
+                <p>La confesión de Wolf</p>
+            </div>
+        </div>
+
+        <!-- Episodio 17 -->
+        <div class="episode-item" id="btnEpisodio17" data-video="/Episodios/monster/Ep17.mp4">
+            <img src="/Episodios/monster/ep17.webp" alt="Episodio 17" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 17</h3>
+                <p>Un reencuentro</p>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,273 @@
+<header class="catalog-header">
+
+  <div class="catalog-title-row">
+    <h1>Catálogo de Animes</h1>
+    <span id="resultsCount" class="results-count">0 Resultados</span>
+  </div>
+
+  <div class="filters-row">
+    <div class="filters">
+
+      <!-- BUSCADOR -->
+
+      <select id="typeFilter">
+        <option value="">Tipo</option>
+        <option value="TV Anime">TV Anime</option>
+        <option value="OVA">OVA</option>
+        <option value="Película">Película</option>
+        <option value="Especial">Especial</option>
+      </select>
+
+      <select id="genreFilter">
+        <option value="">Género</option>
+        <option value="Acción">Acción</option>
+        <option value="Fantasía">Fantasía</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedia">Comedia</option>
+      </select>
+
+      <select id="yearFilter">
+        <option value="">Año</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+      </select>
+
+      <select id="statusFilter">
+        <option value="">Estado</option>
+        <option value="En emisión">En emisión</option>
+        <option value="Finalizado">Finalizado</option>
+      </select>
+
+      <button id="filterBtn" class="filter-btn">Filtrar</button>
+      <button id="clearBtn" class="clear-btn">Limpiar</button>
+    </div>
+
+    <div class="sort-section">
+      <label for="sortSelect">Ordenar por:</label>
+      <select id="sortSelect">
+        <option value="default">Predeterminado</option>
+        <option value="rating">Puntuación</option>
+        <option value="popular">Populares</option>
+        <option value="title">Título</option>
+        <option value="added">Últimos agregados</option>
+        <option value="release">Últimos estrenos</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<!-- ===============================
+     CONTADOR ESTILO FORTNITE
+================================= -->
+
+<div id="eventoContador" class="contador-box">
+  <!--<h2 id="contadorTitulo">EVENTO RUPTURA</h2>
+  <div id="contadorTiempo">00:00:00:00</div> -->
+</div>
+
+<main class="content">
+
+  <!-- GRID DE ANIMES (4x5) -->
+  <section id="cardsContainer" class="anime-grid"></section>
+
+  <!-- PAGINACIÓN -->
+  <div class="pagination">
+    <button id="prevPage" class="page-btn">« Anterior</button>
+    <span id="pageInfo" class="page-info">Página 1</span>
+    <button id="nextPage" class="page-btn">Siguiente »</button>
+  </div>
+
+  <!-- ===============================
+       NOTICIAS
+  ================================= -->
+
+  <div id="noticiasBox">
+    <div id="noticiaActual"></div>
+  </div>
+
+  <div id="noticiasModal">
+    <div id="noticiasContenido">
+
+      <button class="cerrar" id="cerrarNoticias">X</button>
+
+      <button class="flecha izq" id="noticiaAnterior">❮</button>
+
+      <div id="noticiaGrande"></div>
+
+      <button class="flecha der" id="noticiaSiguiente">❯</button>
+
+      <h2 id="tituloNoticia"></h2>
+      <p id="textoNoticia"></p>
+
+    </div>
+  </div>
+</main>
+<script>
+  // ===============================
+  //   CONTADOR EVENTO
+  // ===============================
+  function iniciarContadorEvento() {
+    const fechaEvento = new Date("2026-06-05T00:00:00").getTime();
+
+    function actualizarContador() {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
+
+      if (diferencia <= 0) {
+        document.getElementById("contadorTiempo").innerHTML = "00:00:00:00";
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      const formato =
+        String(dias).padStart(2, "0") + ":" +
+        String(horas).padStart(2, "0") + ":" +
+        String(minutos).padStart(2, "0") + ":" +
+        String(segundos).padStart(2, "0");
+
+      document.getElementById("contadorTiempo").innerHTML = formato;
+    }
+
+    setInterval(actualizarContador, 1000);
+    actualizarContador();
+  }
+
+  // ===============================
+  //   CATÁLOGO JS
+  // ===============================
+  function cargarCatalogoJS() {
+    iniciarContadorEvento();
+
+    // ===============================
+    //   DATOS DEL CATÁLOGO
+    // ===============================
+    const animeData = [
+      // Rellena aquí tus animes:
+      // { title, type, genre, year, status, rating, popularity, added, url, image }
+    ];
+
+    // ===============================
+    //   VARIABLES
+    // ===============================
+    const cardsContainer = document.getElementById("cardsContainer");
+    const resultsCount = document.getElementById("resultsCount");
+    const typeFilter = document.getElementById("typeFilter");
+    const genreFilter = document.getElementById("genreFilter");
+    const yearFilter = document.getElementById("yearFilter");
+    const statusFilter = document.getElementById("statusFilter");
+    const filterBtn = document.getElementById("filterBtn");
+    const clearBtn = document.getElementById("clearBtn");
+    const sortSelect = document.getElementById("sortSelect");
+    const prevPageBtn = document.getElementById("prevPage");
+    const nextPageBtn = document.getElementById("nextPage");
+    const pageInfo = document.getElementById("pageInfo");
+
+    let currentPage = 1;
+    const pageSize = 16;
+    let filteredData = [...animeData];
+
+    // ===============================
+    //   FILTROS
+    // ===============================
+    function applyFilters() {
+      const type = typeFilter.value;
+      const genre = genreFilter.value;
+      const year = yearFilter.value;
+      const status = statusFilter.value;
+
+      filteredData = animeData.filter((item) => {
+        if (type && item.type !== type) return false;
+        if (genre && !item.genre.includes(genre)) return false;
+        if (year && String(item.year) !== year) return false;
+        if (status && item.status !== status) return false;
+        return true;
+      });
+
+      currentPage = 1;
+      applySorting();
+    }
+
+    function applySorting() {
+      const sortType = sortSelect.value;
+
+      if (sortType === "rating") filteredData.sort((a, b) => b.rating - a.rating);
+      if (sortType === "popular") filteredData.sort((a, b) => b.popularity - a.popularity);
+      if (sortType === "title") filteredData.sort((a, b) => a.title.localeCompare(b.title));
+      if (sortType === "added") filteredData.sort((a, b) => b.added - a.added);
+      if (sortType === "release") filteredData.sort((a, b) => b.year - a.year);
+
+      render();
+    }
+
+    function clearFilters() {
+      typeFilter.value = "";
+      genreFilter.value = "";
+      yearFilter.value = "";
+      statusFilter.value = "";
+      sortSelect.value = "default";
+      filteredData = [...animeData];
+      currentPage = 1;
+      render();
+    }
+
+    // ===============================
+    //   RENDERIZADO
+    // ===============================
+    function render() {
+      const totalPages = Math.max(1, Math.ceil(filteredData.length / pageSize));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      const start = (currentPage - 1) * pageSize;
+      const pageItems = filteredData.slice(start, start + pageSize);
+
+      cardsContainer.innerHTML = pageItems
+        .map(
+          (item) => `
+          <article class="anime-card" onclick="cargarPantallaEpisodios('${item.url}')">
+            <img src="${item.image}">
+            <div class="anime-card-body">
+              <span class="anime-type">${item.type}</span>
+              <h2 class="anime-title">${item.title}</h2>
+              <div class="anime-meta">${item.genre} · ${item.year} · ${item.status}</div>
+            </div>
+          </article>
+        `
+        )
+        .join("");
+
+      resultsCount.textContent = `${filteredData.length} Resultados`;
+      pageInfo.textContent = `Página ${currentPage}`;
+    }
+
+    // ===============================
+    //   EVENTOS
+    // ===============================
+    filterBtn.addEventListener("click", applyFilters);
+    clearBtn.addEventListener("click", clearFilters);
+    sortSelect.addEventListener("change", applySorting);
+
+    prevPageBtn.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        render();
+      }
+    });
+
+    nextPageBtn.addEventListener("click", () => {
+      const totalPages = Math.max(1, Math.ceil(filteredData.length / pageSize));
+      if (currentPage < totalPages) {
+        currentPage++;
+        render();
+      }
+    });
+
+    // RENDER INICIAL
+    render();
+  }
+</script>

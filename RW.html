@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResftWorld</title>
+
+  <link rel="stylesheet" href="RW.css" />
+
+  <!-- Scripts globales -->
+  <script defer src="RW.js"></script>
+  <script defer src="catalogo.js"></script>
+  <script defer src="tienda.js"></script>
+  <script defer src="perfil.js"></script>
+  <script defer src="pasedebatalla.js"></script>
+</head>
+
+<body>
+  <!-- HALLOWEEN DECOR -->
+  <div class="halloween-fog"></div>
+
+  <div class="web-left">🕸️</div>
+  <div class="web-right">🕸️</div>
+
+  <div class="pumpkin pumpkin-left">🎃</div>
+  <div class="pumpkin pumpkin-right">🎃</div>
+
+  <div class="candle candle-left">🕯️</div>
+  <div class="candle candle-right">🕯️</div>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+<!-- Dentro de tu barra superior (top-bar-inner) -->
+<div class="top-bar-inner">
+    <!-- El logo existente -->
+    <div class="logo" onclick="cargarPantalla('catalogo')">ResftWorld</div>
+    
+    <!-- ➕ NUEVO: BOTÓN APARTADO SOCIAL -->
+    <button id="socialMenuBtn" class="social-trigger-btn">
+        <span class="social-icon">👥</span> Social
+    </button>
+
+    <!-- El buscador existente -->
+    <div class="search-box">
+        <input type="text" placeholder="Buscar anime..." id="searchAnimeInput">
+        <button>Buscar</button>
+    </div>
+</div>
+
+<!-- CONTENEDOR MODAL DEL MENÚ SOCIAL (CORREGIDO CON ESTILOS DE SEGURIDAD EN LÍNEA) -->
+<div id="socialSidebarModal" class="social-sidebar-backdrop" style="display: none !important;">
+    <aside class="social-sidebar-content">
+        <!-- Fila superior de pestañas del juego -->
+        <div class="social-tabs-header">
+            <button class="social-tab-item active" title="Amigos">👥</button>
+            <button class="social-tab-item" title="Chats">💬<span class="tab-badge">1</span></button>
+            <button class="social-tab-item" title="Ajustes">⚙️</button>
+            <button class="social-tab-item" title="Cerrar" id="closeSocialSidebarBtn">❌</button>
+        </div>
+
+        <h2 class="social-sidebar-title">Social</h2>
+
+        <!-- Estado de canales de voz -->
+        <div class="social-voice-channels">
+            <div class="channel-card active">
+                <span class="channel-icon">👥</span>
+                <div class="channel-text">
+                    <p class="channel-name">Chat de grupo</p>
+                    <p class="channel-status">Solo tú</p>
+                </div>
+            </div>
+            <div class="channel-card muted">
+                <span class="channel-icon">🌋</span>
+                <div class="channel-text">
+                    <p class="channel-name">Chat del juego</p>
+                    <p class="channel-status">No estás en partida</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de configuración rápida del micrófono -->
+        <div class="social-quick-actions">
+            <button class="quick-act-btn" title="Bloquear Grupo">🔒</button>
+            <button class="quick-act-btn" title="Mutear Micrófono">🎤</button>
+            <button class="quick-act-btn" title="Silenciar Audio">🎧</button>
+            <button class="quick-act-btn" title="Más opciones">•••</button>
+        </div>
+        <p class="social-privacy-disclaimer">Solo con invitación • Micrófono abierto</p>
+        <!-- Tarjeta del perfil de usuario actual -->
+        
+            <img src="Imagenes/perfil.png" class="social-avatar-img" id="socialSidebarOwnAvatar" alt="Tú">
+            
+                runloxboss080 <span class="badge-tu">TÚ</span></p>
+                En el menú principal</p>
+        
+    <!-- LISTA FIJA DE AMIGOS CONECTADOS -->
+    <div class="social-list-section">
+        <div class="section-toggle-header">
+            <span>Amigos conectados</span>
+            <span class="section-count">🟢 10</span>
+        </div>
+        <!-- Contenedor donde se inyectarán los 10 amigos fijos -->
+        <div id="socialFriendsContainer"></div>
+    </div>
+
+            </div>
+        </div>
+
+        <!-- Sección de Listas Desplegables -->
+        <div class="social-scrollable-area">
+
+        </div>
+    </aside>
+</div>
+
+    <!-- Línea 108: Cierre del menú social -->
+    </div> 
+
+    <!-- 🌟 CONTENEDOR FANTASMA INVISIBLE PARA EVITAR EL ERROR DE RATÓN DE CATALOGO.JS 🌟 -->
+    <div style="display: none !important;">
+        <input id="searchInput" type="text" value="">
+        <button id="searchBtn">Buscar</button>
+    </div>
+
+    </div> <!-- Cierra el contenedor interno de tu top-bar -->
+</header> <!-- Cierre correcto del header de la página -->
+
+<!-- BOTÓN DE TIENDA (Línea 115 en adelante) -->
+<button id="storeBtn" class="store-button" type="button">
+
+
+
+<!-- BOTÓN DE TIENDA (CORREGIDO SIN BORDES NI CÍRCULOS MORADOS) -->
+<button id="storeBtn" class="store-button" type="button" onclick="cargarPantalla('tienda')" style="background: none !important; border: none !important; padding: 0 !important; box-shadow: none !important; outline: none !important;">
+    <img src="Imagenes/tienda-musica.jpg" alt="Tienda" style="width: 44px; height: 44px; object-fit: cover; border-radius: 50%; border: none !important; box-shadow: none !important; display: block;">
+</button>
+
+  <!-- AVATAR DEL USUARIO -->
+  <img id="avatarUsuario" src="Imagenes/perfil.png" class="avatar" alt="Perfil de usuario">
+
+  <!-- BOTÓN PAUSAR/REANUDAR -->
+  <button id="musicControlBtn" class="music-control-btn" type="button">
+    ⏸ Pausar música
+  </button>
+<!-- 🔥 NUEVO BOTÓN DE MISIONES (Añadir aquí) -->
+<div class="misiones-nav-circle" id="btn-misiones-nav" title="Ver Misiones">
+    🎯
+</div>
+  
+  <!-- REPRODUCTOR GLOBAL -->
+  <!-- REPRODUCTORES DE AUDIO DE LA WEB -->
+  <audio id="musicPlayer" autoplay loop></audio>
+  <audio id="previewPlayer"></audio>
+  
+  <!-- ¡AÑADE ESTA NUEVA LÍNEA AQUÍ PARA EL REPRODUCTOR DE GENO! -->
+  <audio id="genoAudioPlayer" src="Backend/geno-audio.mp3" preload="auto"></audio>
+
+
+  <!-- BOTÓN PASE DE BATALLA -->
+  <button class="battlepass-button" id="battlepassBtn" type="button">
+    <img src="Imagenes/pase.png" alt="Pase de batalla">
+  </button>
+
+  <!-- BOTÓN TIENDA DE ÍTEMS -->
+  <button id="itemsStoreBtn" class="items-store-button" type="button">
+    <img src="Imagenes/icono-tienda.png" alt="Tienda de ítems">
+  </button>
+
+  <!-- PANEL DE CÓDIGOS (ESTILO INTERFAZ FORTNITE) -->
+  <section id="codesPanel" class="codes-modal" aria-label="Canjear códigos">
+    <div class="codes-modal-content">
+      <h2 class="codes-modal-title">PANEL DE ADMINISTRACIÓN</h2>
+      
+      <div class="codes-modal-terminal">
+        <p>"../rootUser"</p>
+        <p>"$ ingresa_hack_de_sala"</p> <!-- CORREGIDO: Añadida comilla inicial -->
+      </div>
+
+      <div class="code-form">
+        <span class="terminal-prefix">...\</span>
+        <input
+          id="codeInput"
+          type="text"
+          placeholder=""
+          autocomplete="off"
+          maxlength="30"
+        />
+      </div>
+
+      <!-- MENSAJE DE ÉXITO O ERROR (invisible por defecto) -->
+      <p id="codeMessage" class="code-message" role="status" aria-live="polite"></p>
+
+      <div class="codes-modal-actions">
+        <button id="redeemCodeBtn" class="btn-enviar" type="button">
+          ENVIAR
+        </button>
+        <!-- CORREGIDO: Unificadas clases e ID para asegurar los estilos -->
+        <button id="closeCodesPanelBtn" class="btn-cancelar" type="button">
+          <span class="key-cap">ESC</span> CANCELAR
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR SPA -->
+  <main id="app"></main>
+
+   <!-- CONTENEDOR PARA EL EFECTO HACKEO/GLITCH "GENO" (ACTUALIZADO PARA VIDEO MP4) -->
+  <!-- CAPA DE INTERFERENCIA CRÍTICA PARA EL EFECTO "GENO" -->
+  <div id="genoGlitchOverlay" class="geno-glitch-overlay" aria-hidden="true">
+    <div class="crt-lines"></div>
+    <div class="glitch-flash"></div>
+  </div>
+
+
+
+
+
+    <!-- MODAL DE VIDEO EVENTO (ESTILO TRAILER FORTNITE) -->
+  <div id="videoEventModal" class="video-event-modal" aria-hidden="true">
+    <div class="video-event-content">
+      <!-- Botón de cerrar superior derecho -->
+      <button id="closeVideoEventBtn" class="video-event-close" type="button">×</button>
+      
+      <!-- Contenedor del Reproductor -->
+      <div class="video-event-player-container">
+        <!-- Reemplaza "tu-video.mp4" por la ruta de tu archivo de video o un enlace -->
+        <video id="eventVideo" controls>
+          <source src="/Codigos/resftween.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        
+        <!-- Flechas decorativas estilo galería (opcionales) -->
+        <button class="video-arrow arrow-left" type="button"></button>
+        <button class="video-arrow arrow-right" type="button"></button>
+      </div>
+
+      <!-- Textos inferiores -->
+      <div class="video-event-footer">
+        <h3 id="videoEventTitle" class="video-event-title">Cuando la isla se rompe, comienza otra...</h3>
+        <p id="videoEventSub" class="video-event-subtitle">
+          No te pierdas la gran batalla que dará comienzo a una nueva era.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PANTALLA DE RECOMPENSA DESBLOQUEADA (ESTILO FORTNITE) -->
+  <div id="rewardModal" class="reward-modal" aria-hidden="true">
+    <div class="reward-modal-content">
+      
+      <!-- Lado Izquierdo: Mensaje de desbloqueo -->
+      <div class="reward-left-zone">
+        <h2 class="reward-status-title">RECOMPENSA DEL MODO DE CÓDIGOS DESBLOQUEADA</h2>
+      </div>
+
+      <!-- Centro: Imagen del Objeto Brillando -->
+       <!-- Centro: Imagen del Objeto Metida dentro de su Marco de Neón -->
+      <div class="reward-center-zone">
+        <div class="reward-item-glow">
+          <img id="rewardItemImage" src="Imagenes/cancion31.jfif" alt="Canción Override" class="reward-item-image">
+        </div>
+      </div>
+
+
+      <!-- Lado Derecho: Detalles de la Recompensa -->
+      <div class="reward-right-zone">
+        <span class="reward-type-label">PISTA DE ENTRADA</span>
+        <h3 id="rewardItemName" class="reward-item-name">OVERRIDE (HACK HALLOWEEN)</h3>
+        <p id="rewardItemDesc" class="reward-item-description">Ponle ritmo al fin del mundo. Música de fondo desbloqueada.</p>
+      </div>
+
+      <!-- Fila Inferior: Botones de Acción Interactivos -->
+      <div class="reward-actions-row">
+        <button id="rewardEquipBtn" class="btn-reward-equip" type="button">EQUIPAR</button>
+        <button id="rewardCollectBtn" class="btn-reward-collect" type="button">RECOGER TODO</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- BOTÓN PARA ABRIR EL PANEL DE CÓDIGOS -->
+  <button
+    id="openCodesPanelBtn"
+    class="codes-button"
+    type="button"
+    aria-expanded="false"
+    aria-controls="codesPanel"
+  >
+    ../ panel de administracion
+  </button>
+
+

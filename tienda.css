@@ -1,0 +1,192 @@
+/* ===============================
+   TIENDA – CONTENEDOR PRINCIPAL
+================================= */
+
+.tienda-contenedor {
+    display: flex;
+    height: calc(100vh - 80px); /* Resta la top-bar */
+    margin-top: 30px; /* Altura de la barra superior */
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a0033, #0a001a);
+    color: white;
+}
+
+/* ===============================
+   LISTA IZQUIERDA (SCROLL)
+================================= */
+
+.lista-canciones {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    overflow-y: auto; /* Scroll independiente */
+    max-height: calc(100vh - 120px);
+}
+
+.song-item {
+    display: flex;              /* 🔥 Hace que sea horizontal */
+    align-items: center;        /* Centra verticalmente */
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.song-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.song-thumb {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;             /* Evita que se deforme */
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.song-info p {
+    margin: 3px 0;
+    color: #ccc;
+}
+/* ===============================
+   CANCIONES EN HORIZONTAL
+================================= */
+
+.store-item {
+    display: flex;              /* 🔥 Horizontal */
+    align-items: center;        /* Centrado vertical */
+    gap: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 12px; /* 🔥 mini hueco entre canciones */
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.store-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.store-thumb {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.store-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.store-info p {
+    margin: 3px 0;
+    color: #ccc;
+}
+/* ===============================
+   PANEL DERECHO (FIJO)
+================================= */
+
+.detalle-cancion {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+
+    position: sticky;   /* Fijo */
+    top: 80px;          /* Debajo de la top-bar */
+    height: calc(100vh - 120px);
+    overflow: hidden;
+}
+
+.detalle-cancion img {
+    width: 260px;
+    height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.detalle-cancion h2 {
+    margin: 10px 0;
+}
+
+.store-btn {
+    padding: 12px 20px;
+    background: #ff0077;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.store-btn:hover {
+    background: #ff3399;
+}
+
+/* ===============================
+   SALDO
+================================= */
+
+.balance-box {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ===============================
+   CARTEL DE NOVEDAD
+================================= */
+
+.store-item {
+    justify-content: space-between; /* Empuja el contenedor de información a la izquierda y el cartel a la derecha */
+    position: relative;
+}
+
+.store-info {
+    flex-grow: 1; /* Permite que la información ocupe el espacio intermedio */
+}
+
+.badge-novedad {
+    background: linear-gradient(to right, #ff69b4, #ffb347, #ffdf00); /* Degradado rosa/naranja/amarillo exacto */
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    font-style: italic; /* Letras inclinadas idénticas a tu imagen */
+    letter-spacing: 0.5px;
+    padding: 6px 18px;
+    border-radius: 20px; /* Bordes totalmente redondeados */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.4);
+    flex-shrink: 0; /* Evita que el cartel se encoja en pantallas pequeñas */
+    margin-left: 15px;
+    text-transform: uppercase;
+}

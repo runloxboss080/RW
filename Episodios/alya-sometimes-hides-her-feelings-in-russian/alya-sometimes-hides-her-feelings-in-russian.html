@@ -1,0 +1,142 @@
+<!-- Enlace al archivo de estilos CSS -->
+<link rel="stylesheet" href="/Episodios/alya-sometimes-hides-her-feelings-in-russian/alya-sometimes-hides-her-feelings-in-russian.css">
+
+<!-- Banner superior decorativo -->
+<div class="episode-banner" style="background-image: url('Imagenes/banner-alya-sometimes-hides-her-feelings-in-russian.jpg');"></div>
+
+<div class="episode-container">
+    <!-- Botón Volver -->
+    <a class="back-btn" onclick="cargarPantalla('catalogo')">← Volver al catálogo</a>
+
+    <!-- CABECERA CONFIGURADA CON EL ÍNDICE TEMPORAL -->
+    <div class="episode-header-wrapper">
+        <h1 class="episode-title">Alya Sometimes Hides Her Feelings in Russian</h1>
+        
+        <!-- 🌟 EL DESPLEGABLE DE TEMPORADAS -->
+        <div class="season-select-wrapper">
+            <select id="seasonDropdownSelector" onchange="const target = document.getElementById(this.value); if(target) target.scrollIntoView({ behavior: 'smooth' });">
+                <option value="" disabled selected hidden>Temporadas</option>
+                <option value="temporada1">Temporada 1</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         🌟 SECCIÓN: TEMPORADA 1
+         ========================================== -->
+    <div id="temporada1" class="season-anchor-point"></div>
+    <div class="season-separator-card">
+        <h2>Temporada 1</h2>
+        <div class="separator-line"></div>
+    </div>
+
+    <div class="episode-list">
+        <!-- Episodio 1 -->
+        <div class="episode-item" id="btnEpisodio1" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep1.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep1.webp" alt="Episodio 1" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 1</h3>
+                <p>Alya esconde sus sentimientos en ruso</p>
+            </div>
+        </div>
+
+        <!-- Episodio 2 -->
+        <div class="episode-item" id="btnEpisodio2" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep2.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep2.webp" alt="Episodio 2" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 2</h3>
+                <p>Amigos de la infancia</p>
+            </div>
+        </div>
+
+        <!-- Episodio 3 -->
+        <div class="episode-item" id="btnEpisodio3" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep3.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep3.webp" alt="Episodio 3" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 3</h3>
+                <p>Y así se conocieron</p>
+            </div>
+        </div>
+
+        <!-- Episodio 4 -->
+        <div class="episode-item" id="btnEpisodio4" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep4.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep4.webp" alt="Episodio 4" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 4</h3>
+                <p>Un desborde de emociones</p>
+            </div>
+        </div>
+
+        <!-- Episodio 5 -->
+        <div class="episode-item" id="btnEpisodio5" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep5.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep5.webp" alt="Episodio 5" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 5</h3>
+                <p>Diferentes decisiones</p>
+            </div>
+        </div>
+
+        <!-- Episodio 6 -->
+        <div class="episode-item" id="btnEpisodio6" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep6.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep6.webp" alt="Episodio 6" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 6</h3>
+                <p>Un beso indirecto de lo más directo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 7 -->
+        <div class="episode-item" id="btnEpisodio7" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep7.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep7.webp" alt="Episodio 7" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 7</h3>
+                <p>Comienza la tormenta</p>
+            </div>
+        </div>
+
+        <!-- Episodio 8 -->
+        <div class="episode-item" id="btnEpisodio8" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep8.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep8.webp" alt="Episodio 8" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 8</h3>
+                <p>Encuentro en el campus</p>
+            </div>
+        </div>
+
+        <!-- Episodio 9 -->
+        <div class="episode-item" id="btnEpisodio9" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep9.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep9.webp" alt="Episodio 9" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 9</h3>
+                <p>Comedia romántica después de la hipnosis</p>
+            </div>
+        </div>
+
+        <!-- Episodio 10 -->
+        <div class="episode-item" id="btnEpisodio10" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep10.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep10.webp" alt="Episodio 10" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 10</h3>
+                <p>Fiesta de cumpleaños tardía</p>
+            </div>
+        </div>
+
+        <!-- Episodio 11 -->
+        <div class="episode-item" id="btnEpisodio11" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep11.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep11.webp" alt="Episodio 11" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 11</h3>
+                <p>Una escaramuza inesperada</p>
+            </div>
+        </div>
+
+        <!-- Episodio 12 -->
+        <div class="episode-item" id="btnEpisodio12" data-video="/Episodios/alya-sometimes-hides-her-feelings-in-russian/Ep12.mp4">
+            <img src="/Episodios/alya-sometimes-hides-her-feelings-in-russian/ep12.webp" alt="Episodio 12" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 12</h3>
+                <p>Mirando hacia el frente</p>
+            </div>
+        </div>
+    </div>
+</div>

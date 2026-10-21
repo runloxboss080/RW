@@ -1,0 +1,65 @@
+<!-- MODAL DE IMAGEN AMPLIADA -->
+
+    <div id="modalVideo" class="modal-imagen">
+ 
+<span id="cerrarVideo" class="cerrar-modal">
+&times;
+</span>
+ 
+<video
+id="videoAmpliado"
+controls
+autoplay
+>
+</video>
+ 
+</div>
+  <span id="cerrarModal" class="cerrar-modal">&times;</span>
+  <img id="imagenAmpliada" class="imagen-ampliada" src="" alt="Vista ampliada">
+</div>
+
+<div id="tiendaItems" class="tienda-items-container">
+<body>
+    <h1 class="tienda-title">Tienda de Ítems</h1>
+
+    <!-- FILTROS -->
+    <div class="tienda-filtros">
+
+        <select id="filtroAnime">
+            <option value="">Todos los animes</option>
+            <option value="Naruto">Naruto</option>
+            <option value="Demon Slayer">Demon Slayer</option>
+            <option value="One Piece">One Piece</option>
+            <option value="Jujutsu Kaisen">Jujutsu Kaisen</option>
+            <option value="Ghost Face">Ghost Face</option>
+        </select>
+
+        <select id="filtroTipo">
+            <option value="">Todos los tipos</option>
+            <option value="Katana">Katana</option>
+            <option value="Aura">Aura</option>
+            <option value="Skin">Skin</option>
+            <option value="Mochila">Mochila</option>
+        </select>
+
+        <select id="ordenPrecio">
+            <option value="">Ordenar por precio</option>
+            <option value="alto">Más caro primero</option>
+            <option value="bajo">Más barato primero</option>
+        </select>
+
+    </div>
+
+    <!-- GRID -->
+    <div id="tiendaGrid" class="tienda-grid"></div>
+
+</div>
+
+ 
+<span id="cerrarVideo" class="cerrar-modal">
+&times;
+</span>
+
+</body>
+<link rel="stylesheet" href="tienda-items.css">
+<script src="tienda-items.js"></script>

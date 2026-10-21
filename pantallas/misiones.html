@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misiones</title>
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="RW.css">
+
+    <link rel="stylesheet" href="misiones.js">
+
+  <!-- CSS DEL PERFIL -->
+  <link rel="stylesheet" href="misiones.css" />
+
+<div class="fortnite-misiones-wrapper">
+    
+<div class="fortnite-misiones-wrapper">
+    
+    <!-- 1. MENÚ LATERAL IZQUIERDO UNIFICADO -->
+    <div class="fn-sidebar">
+        <div class="fn-sidebar-item muted">
+            <span class="fn-icon">⭐</span> En seguimiento
+        </div>
+        
+        <!-- SECCIÓN MISIONES -->
+        <div class="fn-sidebar-category open">
+            <div class="fn-category-trigger">
+                <span class="fn-icon">📋</span> Misiones <span class="arrow-up">▲</span>
+            </div>
+            <div class="fn-category-links">
+                <!-- Llama a la función para ver misiones y oculta personajes -->
+                <button onclick="alternarVistaFortnite('misiones', this)" class="active" id="btn-tab-historia">Historia</button>
+            </div>
+        </div>
+        
+        <div class="fn-sidebar-item muted">
+            <span class="fn-icon">🐾</span> Compañeros
+        </div>
+        
+        <!-- SECCIÓN COLECCIONES -->
+        <div class="fn-sidebar-category open" style="margin-top: 15px;">
+            <div class="fn-category-trigger">
+                <span class="fn-icon">🏅</span> Colecciones <span class="arrow-up">▲</span>
+            </div>
+            <div class="fn-category-links">
+                <!-- Llama a la función para ver personajes y oculta misiones -->
+                <button onclick="alternarVistaFortnite('personajes', this)" id="btn-tab-personajes">👤 Personajes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. PANEL DERECHO DINÁMICO -->
+    <div class="fn-main-panel">
+        
+        <!-- ==========================================
+           VISTA A: APARTADO DE MISIONES (HISTORIA)
+           ========================================== -->
+        <div id="vista-misiones-fortnite">
+            <div class="fn-panel-header">
+                <h2 class="fn-header-title">HISTORIA</h2>
+                <div class="fn-timer-badge">⏱️ Termina en 3 SEM 5 DÍAS</div>
+            </div>
+            <div id="contenedorMisiones">
+                <div class="misiones-cargando">
+                    <p>Cargando lista de desafíos estelares...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+           VISTA B: APARTADO DE PERSONAJES (OCULTO POR DEFECTO)
+           ========================================== -->
+        <div id="vista-personajes-fortnite" class="fn-hidden-view">
+            <div class="fn-panel-header">
+                <h2 class="fn-header-title">PERSONAJES</h2>
+                <div class="fn-timer-badge">👥 14 Descubiertos</div>
+            </div>
+            
+            <div class="fn-characters-grid">
+                <!-- TARJETA 1 -->
+                <div class="fn-char-card" data-character="Oscar" data-img="Misiones/Imagenes/Oscar.jpg">
+                    <img src="Misiones/Imagenes/Oscar.jpg" alt="Oscar" onerror="this.src='https://placehold.co?'">
+                </div>
+                <!-- TARJETA 2 -->
+                <div class="fn-char-card" data-character="Anastasia" data-img="Misiones/Imagenes/Anastasia.jpg">
+                    <img src="Misiones/Imagenes/Anastasia.jpg" alt="Anastasia" onerror="this.src='https://placehold.co?'">
+                </div>
+                <!-- TARJETA 3 -->
+                <div class="fn-char-card" data-character="Andrea" data-img="Misiones/Imagenes/Andrea.jpg">
+                  <img src="Misiones/Imagenes/Andrea.jpg" alt="Andrea-M">
+                      <span>Andrea-M</span>
+                </div>
+                <!-- TARJETA 4 -->
+                <div class="fn-char-card" data-character="Sierra" data-img="Misiones/Imagenes/Sierra.jpg">
+                  <img src="Misiones/Imagenes/Sierra.jpg" alt="Andrea-M">
+                      <span>Sierra</span>
+                </div>
+                <!-- TARJETA 5 -->
+                <div class="fn-char-card" data-character="Natalia_Elite" data-img="Misiones/Imagenes/Natalia_Elite.jpg">
+                  <img src="Misiones/Imagenes/Natalia_Elite.jpg" alt="Natalia_Elite">
+                      <span>Natalia_Elite</span>
+                </div>
+                <!-- TARJETA 6 -->
+                <div class="fn-char-card" data-character="Andrea_Elite" data-img="Misiones/Imagenes/Andrea_Elite.jpg">
+                  <img src="Misiones/Imagenes/Andrea_Elite.jpg" alt="Andrea_Elite">
+                      <span>Andrea_Elite</span>
+                </div>
+                <!-- TARJETA 7 -->
+                <div class="fn-char-card" data-character="Sergio_Elite" data-img="Misiones/Imagenes/Sergio_Elite.jpg">
+                  <img src="Misiones/Imagenes/Sergio_Elite.jpg" alt="Sergio_Elite">
+                      <span>Sergio_Elite</span>
+                </div>
+                <!-- TARJETA 8 -->
+                <div class="fn-char-card" data-character="Alex" data-img="Misiones/Imagenes/Alex.jpg">
+                  <img src="Misiones/Imagenes/Alex.jpg" alt="Alex">
+                      <span>Alex</span>
+                </div>
+                <!-- TARJETA 9 -->
+                <div class="fn-char-card" data-character="Enol" data-img="Misiones/Imagenes/Enol.jpg">
+                  <img src="Misiones/Imagenes/Enol.jpg" alt="Enol">
+                      <span>Enol</span>
+                </div>
+                <!-- TARJETA 10 -->
+                <div class="fn-char-card" data-character="Sofia" data-img="Misiones/Imagenes/Sofia.jpg">
+                  <img src="Misiones/Imagenes/Sofia.jpg" alt="Sofia">
+                      <span>Enol</span>
+                </div>
+                <!-- TARJETAS COMPLEMENTARIAS VACÍAS -->
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+                <div class="fn-char-card"><img src="https://placehold.co?"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL DE DIÁLOGO FORTNITE -->
+<div id="fnDialogoModal" class="fn-dialogo-overlay" style="display: none !important;" onclick="cerrarDialogoPersonaje(event)">
+    <div class="fn-dialogo-container" onclick="event.stopPropagation()">
+        <div class="fn-dialogo-avatar-wrapper">
+            <img id="fnDialogoImg" src="" alt="Personaje">
+        </div>
+        <div class="fn-dialogo-textbox">
+            <h3 id="fnDialogoNombre" style="margin: 0 0 5px 0; color: #ff7b00; font-size: 1.1rem; text-transform: uppercase;">Oscar</h3>
+            <p id="fnDialogoTexto">Quiero contarte...</p>
+        </div>
+        <div class="fn-dialogo-options" id="fnDialogoOpciones"></div>
+    </div>
+</div>

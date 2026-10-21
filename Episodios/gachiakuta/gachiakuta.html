@@ -1,0 +1,233 @@
+<!-- Enlace al archivo de estilos CSS -->
+<link rel="stylesheet" href="/Episodios/gachiakuta/gachiakuta.css">
+
+<!-- Banner superior decorativo -->
+<div class="episode-banner" style="background-image: url('Imagenes/banner-gachiakuta.jpg');"></div>
+
+<div class="episode-container">
+    <!-- Botón Volver -->
+    <a class="back-btn" onclick="cargarPantalla('catalogo')">← Volver al catálogo</a>
+
+    <!-- CABECERA CONFIGURADA CON EL ÍNDICE TEMPORAL -->
+    <div class="episode-header-wrapper">
+        <h1 class="episode-title">Gachiakuta</h1>
+        
+        <!-- 🌟 EL DESPLEGABLE DE SECCIONES / TEMPORADAS -->
+        <div class="season-select-wrapper">
+            <select id="seasonDropdownSelector" onchange="const target = document.getElementById(this.value); if(target) target.scrollIntoView({ behavior: 'smooth' });">
+                <option value="" disabled selected hidden>Temporadas</option>
+                <option value="temporada1-parte1">Temporada 1 - Parte 1 (Cap. 1-13)</option>
+                <option value="temporada1-parte2">Temporada 1 - Parte 2 (Cap. 14-24)</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         🌟 SECCIÓN: TEMPORADA 1 - PARTE 1 🌟
+         ========================================== -->
+    <div id="temporada1-parte1" class="season-anchor-point"></div>
+    <div class="season-separator-card">
+        <h2>Temporada 1 - Parte 1</h2>
+        <div class="separator-line"></div>
+    </div>
+
+    <div class="episode-list">
+        <!-- Episodio 1 -->
+        <div class="episode-item" id="btnEpisodio1" data-video="/Episodios/gachiakuta/Ep1.mp4">
+            <img src="/Episodios/gachiakuta/ep1.webp" alt="Episodio 1" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 1</h3>
+                <p>El habitante del foso</p>
+            </div>
+        </div>
+
+        <!-- Episodio 2 -->
+        <div class="episode-item" id="btnEpisodio2" data-video="/Episodios/gachiakuta/Ep2.mp4">
+            <img src="/Episodios/gachiakuta/ep2.webp" alt="Episodio 2" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 2</h3>
+                <p>Basura viviente</p>
+            </div>
+        </div>
+
+        <!-- Episodio 3 -->
+        <div class="episode-item" id="btnEpisodio3" data-video="/Episodios/gachiakuta/Ep3.mp4">
+            <img src="/Episodios/gachiakuta/ep3.webp" alt="Episodio 3" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 3</h3>
+                <p>El poder de un Jinki</p>
+            </div>
+        </div>
+
+        <!-- Episodio 4 -->
+        <div class="episode-item" id="btnEpisodio4" data-video="/Episodios/gachiakuta/Ep4.mp4">
+            <img src="/Episodios/gachiakuta/ep4.webp" alt="Episodio 4" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 4</h3>
+                <p>Los Limpiadores</p>
+            </div>
+        </div>
+
+        <!-- Episodio 5 -->
+        <div class="episode-item" id="btnEpisodio5" data-video="/Episodios/gachiakuta/Ep5.mp4">
+            <img src="/Episodios/gachiakuta/ep5.webp" alt="Episodio 5" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 5</h3>
+                <p>Mundo subterráneo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 6 -->
+        <div class="episode-item" id="btnEpisodio6" data-video="/Episodios/gachiakuta/Ep6.mp4">
+            <img src="/Episodios/gachiakuta/ep6.webp" alt="Episodio 6" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 6</h3>
+                <p>Asalto de los asaltantes</p>
+            </div>
+        </div>
+
+        <!-- Episodio 7 -->
+        <div class="episode-item" id="btnEpisodio7" data-video="/Episodios/gachiakuta/Ep7.mp4">
+            <img src="/Episodios/gachiakuta/ep7.webp" alt="Episodio 7" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 7</h3>
+                <p>Prueba de fuerza</p>
+            </div>
+        </div>
+
+        <!-- Episodio 8 -->
+        <div class="episode-item" id="btnEpisodio8" data-video="/Episodios/gachiakuta/Ep8.mp4">
+            <img src="/Episodios/gachiakuta/ep8.webp" alt="Episodio 8" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 8</h3>
+                <p>El valor de lo que tiras</p>
+            </div>
+        </div>
+
+        <!-- Episodio 9 -->
+        <div class="episode-item" id="btnEpisodio9" data-video="/Episodios/gachiakuta/Ep9.mp4">
+            <img src="/Episodios/gachiakuta/ep9.webp" alt="Episodio 9" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 9</h3>
+                <p>Despertar oscuro</p>
+            </div>
+        </div>
+
+        <!-- Episodio 10 -->
+        <div class="episode-item" id="btnEpisodio10" data-video="/Episodios/gachiakuta/Ep10.mp4">
+            <img src="/Episodios/gachiakuta/ep10.webp" alt="Episodio 10" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 10</h3>
+                <p>La zona prohibida: Penta</p>
+            </div>
+        </div>
+
+        <!-- Episodio 11 -->
+        <div class="episode-item" id="btnEpisodio11" data-video="/Episodios/gachiakuta/Ep11.mp4">
+            <img src="/Episodios/gachiakuta/ep11.webp" alt="Episodio 11" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 11</h3>
+                <p>La hospitalidad de Amo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 12 -->
+        <div class="episode-item" id="btnEpisodio12" data-video="/Episodios/gachiakuta/Ep12.mp4">
+            <img src="/Episodios/gachiakuta/ep12.webp" alt="Episodio 12" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 12</h3>
+                <p>Como una maldición</p>
+            </div>
+        </div>
+
+        <!-- Episodio 13 -->
+        <div class="episode-item" id="btnEpisodio13" data-video="/Episodios/gachiakuta/Ep13.mp4">
+            <img src="/Episodios/gachiakuta/ep13.webp" alt="Episodio 13" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 13</h3>
+                <p>Ojos vacíos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         🌟 SECCIÓN: TEMPORADA 1 - PARTE 2 🌟
+         ========================================== -->
+    <div id="temporada1-parte2" class="season-anchor-point"></div>
+    <div class="season-separator-card">
+        <h2>Temporada 1 - Parte 2</h2>
+        <div class="separator-line"></div>
+    </div>
+
+    <div class="episode-list">
+        <!-- Episodio 14 -->
+        <div class="episode-item" id="btnEpisodio14" data-video="/Episodios/gachiakuta/Ep14.mp4">
+            <img src="/Episodios/gachiakuta/ep14.webp" alt="Episodio 14" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 14</h3>
+                <p>La tormenta antes de la tormenta</p>
+            </div>
+        </div>
+
+        <!-- Episodio 15 -->
+        <div class="episode-item" id="btnEpisodio15" data-video="/Episodios/gachiakuta/Ep15.mp4">
+            <img src="/Episodios/gachiakuta/ep15.webp" alt="Episodio 15" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 15</h3>
+                <p>Bestias de basura salvajes</p>
+            </div>
+        </div>
+
+        <!-- Episodio 16 -->
+        <div class="episode-item" id="btnEpisodio16" data-video="/Episodios/gachiakuta/Ep16.mp4">
+            <img src="/Episodios/gachiakuta/ep16.webp" alt="Episodio 16" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 16</h3>
+                <p>La determinación de Rudo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 17 -->
+        <div class="episode-item" id="btnEpisodio17" data-video="/Episodios/gachiakuta/Ep17.mp4">
+            <img src="/Episodios/gachiakuta/ep17.webp" alt="Episodio 17" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 17</h3>
+                <p>Contrataque coordinado</p>
+            </div>
+        </div>
+
+        <!-- Episodio 18 -->
+        <div class="episode-item" id="btnEpisodio18" data-video="/Episodios/gachiakuta/Ep18.mp4">
+            <img src="/Episodios/gachiakuta/ep18.webp" alt="Episodio 18" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 18</h3>
+                <p>Lazos residuales</p>
+            </div>
+        </div>
+
+        <!-- Episodio 19 -->
+        <div class="episode-item" id="btnEpisodio19" data-video="/Episodios/gachiakuta/Ep19.mp4">
+            <img src="/Episodios/gachiakuta/ep19.webp" alt="Episodio 19" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 19</h3>
+                <p>La serie de los Vigilantes</p>
+            </div>
+        </div>
+
+        <!-- Episodio 20 -->
+        <div class="episode-item" id="btnEpisodio20" data-video="/Episodios/gachiakuta/Ep20.mp4">
+            <img src="/Episodios/gachiakuta/ep20.webp" alt="Episodio 20" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 20</h3>
+                <p>El abismo de la Esfera</p>
+            </div>
+        </div>
+
+        <!-- Episodio 21 -->
+        <div class="episode-item" id="btnEpisodio21" data-video="/Episodios/gachiakuta/Ep21.mp4">
+            <img src="/Episodios/gachiakuta/ep21.webp" alt="Episodio 21" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 21</h3>
+                <p>Ataque de tiempo</p>
+            </div>
+        </div>

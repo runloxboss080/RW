@@ -1,0 +1,890 @@
+<!-- Enlace al archivo de estilos CSS -->
+<link rel="stylesheet" href="/Episodios/aot/aot.css">
+
+<!-- Banner superior decorativo -->
+<div class="episode-banner" style="background-image: url('Imagenes/banner-aot.jpg');"></div>
+
+<div class="episode-container">
+    <!-- Botón Volver -->
+    <a class="back-btn" onclick="cargarPantalla('catalogo')">← Volver al catálogo</a>
+
+    <!-- CABECERA CONFIGURADA CON EL ÍNDICE TEMPORAL -->
+    <div class="episode-header-wrapper">
+        <h1 class="episode-title">Attack on Titan</h1>
+        
+    <!-- 🌟 EL DESPLEGABLE SITUADO AQUÍ -->
+    <div class="season-select-wrapper">
+        <select id="seasonDropdownSelector" onchange="const target = document.getElementById(this.value); if(target) target.scrollIntoView({ behavior: 'smooth' });">
+            <option value="" disabled selected hidden>Temporadas</option>
+            <option value="temporada1">Temporada 1</option>
+            <option value="temporada2">Temporada 2</option>
+            <option value="temporada3.1">Temporada 3 Parte 1</option>
+            <option value="temporada3.2">Temporada 3 Parte 2</option>
+            <option value="temporada4.1">Temporada 4 - Parte 1</option>
+            <option value="temporada4.2">Temporada 4 - Parte 2</option>
+            <option value="temporada0">Temporada Final</option>
+        </select>
+    </div>
+
+
+
+            <!-- 🌟 ANCLAJE DE LA TEMPORADA 1 🌟 -->
+        <div id="temporada1" class="season-anchor-point"></div>
+
+    <!-- El cartel de "TEMPORADA 1" y tu lista de episodios continúan abajo normalmente -->
+    <div class="season-separator-card" id="temporada1">
+        <h2>Temporada 1</h2>
+        <div class="separator-line"></div>
+    </div>
+
+    <!-- Lista de Capítulos -->
+    <div class="episode-list">
+        
+        <!-- 🌟 TARJETA CON CONTENEDOR FANTASMA SEGURO 🌟 -->
+        <div class="episode-item" id="btnEpisodio1" data-video="/Episodios/aot/Ep1.mp4">
+            <img src="/Episodios/aot/ep1.webp" alt="Episodio 1" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 1</h3>
+                <p>Comienza la historia de Eren y los titanes.</p>
+            </div>
+        </div>
+
+        <!-- Episodio 2 -->
+        <div class="episode-item" id="btnEpisodio2" data-video="/Episodios/aot/Ep2.mp4">
+            <img src="/Episodios/aot/ep2.webp" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 2</h3>
+                <p>La humanidad lucha por sobrevivir.</p>
+            </div>
+        </div>
+
+        <!-- Episodio 3 -->
+        <div class="episode-item" id="btnEpisodio3" data-video="/Episodios/aot/Ep3.mp4">
+            <img src="/Episodios/aot/ep3.webp" alt="Episodio 3" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 3</h3>
+                <p>Una tenue luz en medio de la desesperación - La restauración de la humanidad</p>
+            </div>
+        </div>
+
+        <!-- Episodio 4 -->
+        <div class="episode-item" id="btnEpisodio4" data-video="/Episodios/aot/Ep4.mp4">
+            <img src="/Episodios/aot/ep4.webp" alt="Episodio 4" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 4</h3>
+                <p>La noche de la ceremonia de graduación - La restauración de la humanidad, parte 2</p>
+            </div>
+        </div>
+
+        <!-- Episodio 5 -->
+        <div class="episode-item" id="btnEpisodio5" data-video="/Episodios/aot/Ep5.mp4">
+            <img src="/Episodios/aot/ep5.webp" alt="Episodio 5" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 5</h3>
+                <p>Primera batalla - La defensa de Trost, parte 1</p>
+            </div>
+        </div>
+
+        <!-- Episodio 6 -->
+        <div class="episode-item" id="btnEpisodio6" data-video="/Episodios/aot/Ep6.mp4">
+            <img src="/Episodios/aot/ep6.webp" alt="Episodio 6" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 6</h3>
+                <p>El mundo que ella vio - La defensa de Trost, parte 2</p>
+            </div>
+        </div>
+
+        <!-- Episodio 7 -->
+        <div class="episode-item" id="btnEpisodio7" data-video="/Episodios/aot/Ep7.mp4">
+            <img src="/Episodios/aot/ep7.webp" alt="Episodio 7" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 7</h3>
+                <p>Una pequeña hoja - La defensa de Trost, parte 3</p>
+            </div>
+        </div>
+
+        <!-- Episodio 8 -->
+        <div class="episode-item" id="btnEpisodio8" data-video="/Episodios/aot/Ep8.mp4">
+            <img src="/Episodios/aot/ep8.webp" alt="Episodio 8" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 8</h3>
+                <p>Puedo oír los latidos de su corazón - La defensa de Trost, parte 4</p>
+            </div>
+        </div>
+
+        <!-- Episodio 9 -->
+        <div class="episode-item" id="btnEpisodio9" data-video="/Episodios/aot/Ep9.mp4">
+            <img src="/Episodios/aot/ep9.webp" alt="Episodio 9" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 9</h3>
+                <p>El paradero del brazo izquierdo - La defensa de Trost, parte 5</p>
+            </div>
+        </div>
+
+        <!-- Episodio 10 -->
+        <div class="episode-item" id="btnEpisodio10" data-video="/Episodios/aot/Ep10.mp4">
+            <img src="/Episodios/aot/ep10.webp" alt="Episodio 10" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 10</h3>
+                <p>Respuesta - La defensa de Trost, parte 6</p>
+            </div>
+        </div>
+
+        <!-- Episodio 11 -->
+        <div class="episode-item" id="btnEpisodio11" data-video="/Episodios/aot/Ep11.mp4">
+            <img src="/Episodios/aot/ep11.webp" alt="Episodio 11" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 11</h3>
+                <p>Ídolo - La defensa de Trost, parte 7</p>
+            </div>
+        </div>
+
+        <!-- Episodio 12 -->
+        <div class="episode-item" id="btnEpisodio12" data-video="/Episodios/aot/Ep12.mp4">
+            <img src="/Episodios/aot/ep12.webp" alt="Episodio 12" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 12</h3>
+                <p>Herida - La defensa de Trost, parte 8</p>
+            </div>
+        </div>
+
+        <!-- Episodio 13 -->
+        <div class="episode-item" id="btnEpisodio13" data-video="/Episodios/aot/Ep13.mp4">
+            <img src="/Episodios/aot/ep13.webp" alt="Episodio 13" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 13</h3>
+                <p>Deseo primario - La defensa de Trost, parte 9</p>
+            </div>
+        </div>
+
+        <!-- Episodio 14 -->
+        <div class="episode-item" id="btnEpisodio14" data-video="/Episodios/aot/Ep14.mp4">
+            <img src="/Episodios/aot/ep14.webp" alt="Episodio 14" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 14</h3>
+                <p>Aún no puedo mirarlo a los ojos - Preludio al contraataque, parte 1</p>
+            </div>
+        </div>
+
+        <!-- Episodio 15 -->
+        <div class="episode-item" id="btnEpisodio15" data-video="/Episodios/aot/Ep15.mp4">
+            <img src="/Episodios/aot/ep15.webp" alt="Episodio 15" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 15</h3>
+                <p>Escuadrón de operaciones especiales - Preludio al contraataque, parte 2</p>
+            </div>
+        </div>
+
+        <!-- Episodio 16 -->
+        <div class="episode-item" id="btnEpisodio16" data-video="/Episodios/aot/Ep16.mp4">
+            <img src="/Episodios/aot/ep16.webp" alt="Episodio 16" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 16</h3>
+                <p>¿Qué es lo que hay que hacer ahora? - Preludio al contraataque, parte 3</p>
+            </div>
+        </div>
+
+        <!-- Episodio 17 -->
+        <div class="episode-item" id="btnEpisodio17" data-video="/Episodios/aot/Ep17.mp4">
+            <img src="/Episodios/aot/ep17.webp" alt="Episodio 17" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 17</h3>
+                <p>La Titán Hembra - Quincuagésima séptima expedición más allá de los muros, parte 1</p>
+            </div>
+        </div>
+
+        <!-- Episodio 18 -->
+        <div class="episode-item" id="btnEpisodio18" data-video="/Episodios/aot/Ep18.mp4">
+            <img src="/Episodios/aot/ep18.webp" alt="Episodio 18" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 18</h3>
+                <p>Bosque de árboles gigantes - Quincuagésima séptima expedición más allá de los muros, parte 2</p>
+            </div>
+        </div>
+
+        <!-- Episodio 19 -->
+        <div class="episode-item" id="btnEpisodio19" data-video="/Episodios/aot/Ep19.mp4">
+            <img src="/Episodios/aot/ep19.webp" alt="Episodio 19" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 19</h3>
+                <p>Mordisco - Quincuagésima séptima expedición más allá de los muros, parte 3</p>
+            </div>
+        </div>
+
+        <!-- Episodio 20 -->
+        <div class="episode-item" id="btnEpisodio20" data-video="/Episodios/aot/Ep20.mp4">
+            <img src="/Episodios/aot/ep20.webp" alt="Episodio 20" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 20</h3>
+                <p>Erwin Smith - Quincuagésima séptima expedición más allá de los muros, parte 4</p>
+            </div>
+        </div>
+
+        <!-- Episodio 21 -->
+        <div class="episode-item" id="btnEpisodio21" data-video="/Episodios/aot/Ep21.mp4">
+            <img src="/Episodios/aot/ep21.webp" alt="Episodio 21" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 21</h3>
+                <p>Golpe aplastante - Quincuagésima séptima expedición más allá de los muros, parte 5</p>
+            </div>
+        </div>
+
+        <!-- Episodio 22 -->
+        <div class="episode-item" id="btnEpisodio22" data-video="/Episodios/aot/Ep22.mp4">
+            <img src="/Episodios/aot/ep22.webp" alt="Episodio 22" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 22</h3>
+                <p>Los derrotados - Quincuagésima séptima expedición más allá de los muros, parte 6</p>
+            </div>
+        </div>
+
+        <!-- Episodio 23 -->
+        <div class="episode-item" id="btnEpisodio23" data-video="/Episodios/aot/Ep23.mp4">
+            <img src="/Episodios/aot/ep23.webp" alt="Episodio 23" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 23</h3>
+                <p>Sonrisa - Asalto al distrito Stohess, parte 1</p>
+            </div>
+        </div>
+
+        <!-- Episodio 24 -->
+        <div class="episode-item" id="btnEpisodio24" data-video="/Episodios/aot/Ep24.mp4">
+            <img src="/Episodios/aot/ep24.webp" alt="Episodio 24" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 24</h3>
+                <p>Misericordia - Asalto al distrito Stohess, parte 2</p>
+            </div>
+        </div>
+
+        <!-- Episodio 25 -->
+        <div class="episode-item" id="btnEpisodio25" data-video="/Episodios/aot/Ep25.mp4">
+            <img src="/Episodios/aot/ep25.webp" alt="Episodio 25" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 25</h3>
+                <p>El muro - Asalto al distrito Stohess, parte 3</p>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             🌟 CARTEL SEPARADOR DE SEGUNDA TEMPORADA (Añadido exactamente aquí) 🌟
+             ========================================================================== -->
+        <div id="temporada2" class="season-separator-card">
+            <h2>Temporada 2</h2>
+            <div class="separator-line"></div>
+        </div>
+
+        <!-- Episodio 26 -->
+        <div class="episode-item" id="btnEpisodio26" data-video="/Episodios/aot/Ep26.mp4">
+            <img src="/Episodios/aot/ep26.webp" alt="Episodio 26" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 26</h3>
+                <p>El Titán Bestia</p>
+            </div>
+        </div>
+
+        <!-- Episodio 27 -->
+        <div class="episode-item" id="btnEpisodio27" data-video="/Episodios/aot/Ep27.mp4">
+            <img src="/Episodios/aot/ep27.webp" alt="Episodio 27" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 27</h3>
+                <p>Regreso a casa</p>
+            </div>
+        </div>
+
+        <!-- Episodio 28 -->
+        <div class="episode-item" id="btnEpisodio28" data-video="/Episodios/aot/Ep28.mp4">
+            <img src="/Episodios/aot/ep28.webp" alt="Episodio 28" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 28</h3>
+                <p>Hacia el suroeste</p>
+            </div>
+        </div>
+
+        <!-- Episodio 29 -->
+        <div class="episode-item" id="btnEpisodio29" data-video="/Episodios/aot/Ep29.mp4">
+            <img src="/Episodios/aot/ep29.webp" alt="Episodio 29" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 29</h3>
+                <p>Soldados</p>
+            </div>
+        </div>
+
+        <!-- Episodio 30 -->
+        <div class="episode-item" id="btnEpisodio30" data-video="/Episodios/aot/Ep30.mp4">
+            <img src="/Episodios/aot/ep30.webp" alt="Episodio 30" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 30</h3>
+                <p>Historia</p>
+            </div>
+        </div>
+
+        <!-- Episodio 31 -->
+        <div class="episode-item" id="btnEpisodio31" data-video="/Episodios/aot/Ep31.mp4">
+            <img src="/Episodios/aot/ep31.webp" alt="Episodio 31" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 31</h3>
+                <p>Guerrero</p>
+            </div>
+        </div>
+
+        <!-- Episodio 32 -->
+        <div class="episode-item" id="btnEpisodio32" data-video="/Episodios/aot/Ep32.mp4">
+            <img src="/Episodios/aot/ep32.webp" alt="Episodio 32" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 32</h3>
+                <p>Cuerpo a cuerpo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 33 -->
+        <div class="episode-item" id="btnEpisodio33" data-video="/Episodios/aot/Ep33.mp4">
+            <img src="/Episodios/aot/ep33.webp" alt="Episodio 33" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 33</h3>
+                <p>Cazadores</p>
+            </div>
+        </div>
+
+        <!-- Episodio 34 -->
+        <div class="episode-item" id="btnEpisodio34" data-video="/Episodios/aot/Ep34.mp4">
+            <img src="/Episodios/aot/ep34.webp" alt="Episodio 34" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 34</h3>
+                <p>Abertura</p>
+            </div>
+        </div>
+
+        <!-- Episodio 35 -->
+        <div class="episode-item" id="btnEpisodio35" data-video="/Episodios/aot/Ep35.mp4">
+            <img src="/Episodios/aot/ep35.webp" alt="Episodio 35" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 35</h3>
+                <p>Niños</p>
+            </div>
+        </div>
+
+        <!-- Episodio 36 -->
+        <div class="episode-item" id="btnEpisodio36" data-video="/Episodios/aot/Ep36.mp4">
+            <img src="/Episodios/aot/ep36.webp" alt="Episodio 36" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 36</h3>
+                <p>Carga</p>
+            </div>
+        </div>
+
+        <!-- Episodio 37 -->
+        <div class="episode-item" id="btnEpisodio37" data-video="/Episodios/aot/Ep37.mp4">
+            <img src="/Episodios/aot/ep37.webp" alt="Episodio 37" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 37</h3>
+                <p>Grito</p>
+            </div>
+        </div>
+    <!-- El cartel de "TEMPORADA 1" y tu lista de episodios continúan abajo normalmente -->
+        <div id="temporada3.1" class="season-separator-card">
+            <h2>Temporada 3 - Parte 1</h2>
+            <div class="separator-line"></div>
+        </div>
+<!-- MODAL DEL REPRODUCTOR FLOTANTE DE VIDEO -->
+<div id="animeVideoModal" class="video-anime-backdrop" style="display: none !important;">
+    <div class="video-anime-container">
+        <button id="closeAnimeVideoBtn" class="close-anime-video-btn">❌ Cerrar</button>
+        <video id="animeVideoPlayer" controls width="100%" height="100%">
+            <source src="" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+</div>
+
+        <!-- Episodio 38 -->
+        <div class="episode-item" id="btnEpisodio38" data-video="/Episodios/aot/Ep38.mp4">
+            <img src="/Episodios/aot/ep38.webp" alt="Episodio 38" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 38</h3>
+                <p>Señal e inicio de la tormenta</p>
+            </div>
+        </div>
+
+        <!-- Episodio 39 -->
+        <div class="episode-item" id="btnEpisodio39" data-video="/Episodios/aot/Ep39.mp4">
+            <img src="/Episodios/aot/ep39.webp" alt="Episodio 39" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 39</h3>
+                <p>Dolor</p>
+            </div>
+        </div>
+
+        <!-- Episodio 40 -->
+        <div class="episode-item" id="btnEpisodio40" data-video="/Episodios/aot/Ep40.mp4">
+            <img src="/Episodios/aot/ep40.webp" alt="Episodio 40" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 40</h3>
+                <p>Historias del pasado</p>
+            </div>
+        </div>
+
+        <!-- Episodio 41 -->
+        <div class="episode-item" id="btnEpisodio41" data-video="/Episodios/aot/Ep41.mp4">
+            <img src="/Episodios/aot/ep41.webp" alt="Episodio 41" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 41</h3>
+                <p>Confianza</p>
+            </div>
+        </div>
+
+        <!-- Episodio 42 -->
+        <div class="episode-item" id="btnEpisodio42" data-video="/Episodios/aot/Ep42.mp4">
+            <img src="/Episodios/aot/ep42.webp" alt="Episodio 42" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 42</h3>
+                <p>Respuesta</p>
+            </div>
+        </div>
+
+        <!-- Episodio 43 -->
+        <div class="episode-item" id="btnEpisodio43" data-video="/Episodios/aot/Ep43.mp4">
+            <img src="/Episodios/aot/ep43.webp" alt="Episodio 43" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 43</h3>
+                <p>Pecado</p>
+            </div>
+        </div>
+
+        <!-- Episodio 44 -->
+        <div class="episode-item" id="btnEpisodio44" data-video="/Episodios/aot/Ep44.mp4">
+            <img src="/Episodios/aot/ep44.webp" alt="Episodio 44" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 44</h3>
+                <p>Deseo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 45 -->
+        <div class="episode-item" id="btnEpisodio45" data-video="/Episodios/aot/Ep45.mp4">
+            <img src="/Episodios/aot/ep45.webp" alt="Episodio 45" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 45</h3>
+                <p>La reina de la muralla exterior</p>
+            </div>
+        </div>
+
+        <!-- Episodio 46 -->
+        <div class="episode-item" id="btnEpisodio46" data-video="/Episodios/aot/Ep46.mp4">
+            <img src="/Episodios/aot/ep46.webp" alt="Episodio 46" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 46</h3>
+                <p>El titán que nadie pudo ver</p>
+            </div>
+        </div>
+
+        <!-- Episodio 47 -->
+        <div class="episode-item" id="btnEpisodio47" data-video="/Episodios/aot/Ep47.mp4">
+            <img src="/Episodios/aot/ep47.webp" alt="Episodio 47" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 47</h3>
+                <p>Amigos</p>
+            </div>
+        </div>
+
+        <!-- Episodio 48 -->
+        <div class="episode-item" id="btnEpisodio48" data-video="/Episodios/aot/Ep48.mp4">
+            <img src="/Episodios/aot/ep48.webp" alt="Episodio 48" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 48</h3>
+                <p>Espectador</p>
+            </div>
+        </div>
+
+        <!-- Episodio 49 -->
+        <div class="episode-item" id="btnEpisodio49" data-video="/Episodios/aot/Ep49.mp4">
+            <img src="/Episodios/aot/ep49.webp" alt="Episodio 49" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 49</h3>
+                <p>La noche de la operación de reconquista</p>
+            </div>
+        </div>
+    <!-- El cartel de "TEMPORADA 1" y tu lista de episodios continúan abajo normalmente -->
+        <div id="temporada3.2" class="season-separator-card">
+            <h2>Temporada 3 - Parte 2</h2>
+            <div class="separator-line"></div>
+        </div>
+
+        <!-- Episodio 50 -->
+<div class="episode-item" id="btnEpisodio50" data-video="/Episodios/aot/Ep50.mp4">
+  <img src="/Episodios/aot/ep50.webp" alt="Episodio 50" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 50</h3>
+    <p>La ciudad donde todo comenzó</p>
+  </div>
+</div>
+
+<!-- Episodio 51 -->
+<div class="episode-item" id="btnEpisodio51" data-video="/Episodios/aot/Ep51.mp4">
+  <img src="/Episodios/aot/ep51.webp" alt="Episodio 51" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 51</h3>
+    <p>Lanzas relámpago</p>
+  </div>
+</div>
+
+<!-- Episodio 52 -->
+<div class="episode-item" id="btnEpisodio52" data-video="/Episodios/aot/Ep52.mp4">
+  <img src="/Episodios/aot/ep52.webp" alt="Episodio 52" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 52</h3>
+    <p>Descenso</p>
+  </div>
+</div>
+
+<!-- Episodio 53 -->
+<div class="episode-item" id="btnEpisodio53" data-video="/Episodios/aot/Ep53.mp4">
+  <img src="/Episodios/aot/ep53.webp" alt="Episodio 53" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 53</h3>
+    <p>Partida perfecta</p>
+  </div>
+</div>
+
+<!-- Episodio 54 -->
+<div class="episode-item" id="btnEpisodio54" data-video="/Episodios/aot/Ep54.mp4">
+  <img src="/Episodios/aot/ep54.webp" alt="Episodio 54" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 54</h3>
+    <p>Héroe</p>
+  </div>
+</div>
+
+<!-- Episodio 55 -->
+<div class="episode-item" id="btnEpisodio55" data-video="/Episodios/aot/Ep55.mp4">
+  <img src="/Episodios/aot/ep55.webp" alt="Episodio 55" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 55</h3>
+    <p>Sol de medianoche</p>
+  </div>
+</div>
+
+<!-- Episodio 56 -->
+<div class="episode-item" id="btnEpisodio56" data-video="/Episodios/aot/Ep56.mp4">
+  <img src="/Episodios/aot/ep56.webp" alt="Episodio 56" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 56</h3>
+    <p>El sótano</p>
+  </div>
+</div>
+
+<!-- Episodio 57 -->
+<div class="episode-item" id="btnEpisodio57" data-video="/Episodios/aot/Ep57.mp4">
+  <img src="/Episodios/aot/ep57.webp" alt="Episodio 57" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 57</h3>
+    <p>Aquel día</p>
+  </div>
+</div>
+
+<!-- Episodio 58 -->
+<div class="episode-item" id="btnEpisodio58" data-video="/Episodios/aot/Ep58.mp4">
+  <img src="/Episodios/aot/ep58.webp" alt="Episodio 58" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 58</h3>
+    <p>El Titán de Ataque</p>
+  </div>
+</div>
+
+<!-- Episodio 59 -->
+<div class="episode-item" id="btnEpisodio59" data-video="/Episodios/aot/Ep59.mp4">
+  <img src="/Episodios/aot/ep59.webp" alt="Episodio 59" class="episode-thumb">
+  <div class="episode-info">
+    <h3>Episodio 59</h3>
+    <p>Al otro lado de las murallas</p>
+  </div>
+</div>
+
+    <!-- El cartel de "TEMPORADA 1" y tu lista de episodios continúan abajo normalmente -->
+        <div id="temporada4.1" class="season-separator-card">
+            <h2>Temporada 4 - Parte 1 </h2>
+            <div class="separator-line"></div>
+        </div>
+
+        <!-- Episodio 60 -->
+        <div class="episode-item" id="btnEpisodio60" data-video="/Episodios/aot/Ep60.mp4">
+            <img src="/Episodios/aot/ep60.webp" alt="Episodio 60" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 60</h3>
+                <p>Al otro lado del mar</p>
+            </div>
+        </div>
+
+        <!-- Episodio 61 -->
+        <div class="episode-item" id="btnEpisodio61" data-video="/Episodios/aot/Ep61.mp4">
+            <img src="/Episodios/aot/ep61.webp" alt="Episodio 61" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 61</h3>
+                <p>Tren de midnight</p>
+            </div>
+        </div>
+
+        <!-- Episodio 62 -->
+        <div class="episode-item" id="btnEpisodio62" data-video="/Episodios/aot/Ep62.mp4">
+            <img src="/Episodios/aot/ep62.webp" alt="Episodio 62" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 62</h3>
+                <p>La puerta de la esperanza</p>
+            </div>
+        </div>
+
+        <!-- Episodio 63 -->
+        <div class="episode-item" id="btnEpisodio63" data-video="/Episodios/aot/Ep63.mp4">
+            <img src="/Episodios/aot/ep63.webp" alt="Episodio 63" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 63</h3>
+                <p>De mano en mano</p>
+            </div>
+        </div>
+
+        <!-- Episodio 64 -->
+        <div class="episode-item" id="btnEpisodio64" data-video="/Episodios/aot/Ep64.mp4">
+            <img src="/Episodios/aot/ep64.webp" alt="Episodio 64" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 64</h3>
+                <p>Declaración de guerra</p>
+            </div>
+        </div>
+
+        <!-- Episodio 65 -->
+        <div class="episode-item" id="btnEpisodio65" data-video="/Episodios/aot/Ep65.mp4">
+            <img src="/Episodios/aot/ep65.webp" alt="Episodio 65" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 65</h3>
+                <p>El Titán Martillo de Guerra</p>
+            </div>
+        </div>
+
+        <!-- Episodio 66 -->
+        <div class="episode-item" id="btnEpisodio66" data-video="/Episodios/aot/Ep66.mp4">
+            <img src="/Episodios/aot/ep66.webp" alt="Episodio 66" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 66</h3>
+                <p>Asalto</p>
+            </div>
+        </div>
+
+        <!-- Episodio 67 -->
+        <div class="episode-item" id="btnEpisodio67" data-video="/Episodios/aot/Ep67.mp4">
+            <img src="/Episodios/aot/ep67.webp" alt="Episodio 67" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 67</h3>
+                <p>Bala asesina</p>
+            </div>
+        </div>
+
+        <!-- Episodio 68 -->
+        <div class="episode-item" id="btnEpisodio68" data-video="/Episodios/aot/Ep68.mp4">
+            <img src="/Episodios/aot/ep68.webp" alt="Episodio 68" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 68</h3>
+                <p>Valientes voluntarios</p>
+            </div>
+        </div>
+
+        <!-- Episodio 69 -->
+        <div class="episode-item" id="btnEpisodio69" data-video="/Episodios/aot/Ep69.mp4">
+            <img src="/Episodios/aot/ep69.webp" alt="Episodio 69" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 69</h3>
+                <p>Argumentos correctos</p>
+            </div>
+        </div>
+
+        <!-- Episodio 70 -->
+        <div class="episode-item" id="btnEpisodio70" data-video="/Episodios/aot/Ep70.mp4">
+            <img src="/Episodios/aot/ep70.webp" alt="Episodio 70" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 70</h3>
+                <p>Impostor</p>
+            </div>
+        </div>
+
+        <!-- Episodio 71 -->
+        <div class="episode-item" id="btnEpisodio71" data-video="/Episodios/aot/Ep71.mp4">
+            <img src="/Episodios/aot/ep71.webp" alt="Episodio 71" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 71</h3>
+                <p>Guiar</p>
+            </div>
+        </div>
+
+        <!-- Episodio 72 -->
+        <div class="episode-item" id="btnEpisodio72" data-video="/Episodios/aot/Ep72.mp4">
+            <img src="/Episodios/aot/ep72.webp" alt="Episodio 72" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 72</h3>
+                <p>Los hijos del bosque</p>
+            </div>
+        </div>
+
+        <!-- Episodio 73 -->
+        <div class="episode-item" id="btnEpisodio73" data-video="/Episodios/aot/Ep73.mp4">
+            <img src="/Episodios/aot/ep73.webp" alt="Episodio 73" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 73</h3>
+                <p>Violencia</p>
+            </div>
+        </div>
+
+        <!-- Episodio 74 -->
+        <div class="episode-item" id="btnEpisodio74" data-video="/Episodios/aot/Ep74.mp4">
+            <img src="/Episodios/aot/ep74.webp" alt="Episodio 74" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 74</h3>
+                <p>La única salvación</p>
+            </div>
+        </div>
+
+        <!-- Episodio 75 -->
+        <div class="episode-item" id="btnEpisodio75" data-video="/Episodios/aot/Ep75.mp4">
+            <img src="/Episodios/aot/ep75.webp" alt="Episodio 75" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 75</h3>
+                <p>Arriba y abajo</p>
+            </div>
+        </div>
+
+            <!-- El cartel de "TEMPORADA 1" y tu lista de episodios continúan abajo normalmente -->
+        <div id="temporada4.2" class="season-separator-card">
+            <h2>Temporada 4 - Parte 2 </h2>
+            <div class="separator-line"></div>
+        </div>
+
+                <!-- Episodio 76 -->
+        <div class="episode-item" id="btnEpisodio76" data-video="/Episodios/aot/Ep76.mp4">
+            <img src="/Episodios/aot/ep76.webp" alt="Episodio 76" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 76</h3>
+                <p>Juicio</p>
+            </div>
+        </div>
+
+        <!-- Episodio 77 -->
+        <div class="episode-item" id="btnEpisodio77" data-video="/Episodios/aot/Ep77.mp4">
+            <img src="/Episodios/aot/ep77.webp" alt="Episodio 77" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 77</h3>
+                <p>Ataque furtivo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 78 -->
+        <div class="episode-item" id="btnEpisodio78" data-video="/Episodios/aot/Ep78.mp4">
+            <img src="/Episodios/aot/ep78.webp" alt="Episodio 78" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 78</h3>
+                <p>Hermanos mayores y hermanos menores</p>
+            </div>
+        </div>
+
+        <!-- Episodio 79 -->
+        <div class="episode-item" id="btnEpisodio79" data-video="/Episodios/aot/Ep79.mp4">
+            <img src="/Episodios/aot/ep79.webp" alt="Episodio 79" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 79</h3>
+                <p>Recuerdos del futuro</p>
+            </div>
+        </div>
+
+        <!-- Episodio 80 -->
+        <div class="episode-item" id="btnEpisodio80" data-video="/Episodios/aot/Ep80.mp4">
+            <img src="/Episodios/aot/ep80.webp" alt="Episodio 80" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 80</h3>
+                <p>De ti, hace 2000 años</p>
+            </div>
+        </div>
+
+        <!-- Episodio 81 -->
+        <div class="episode-item" id="btnEpisodio81" data-video="/Episodios/aot/Ep81.mp4">
+            <img src="/Episodios/aot/ep81.webp" alt="Episodio 81" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 81</h3>
+                <p>Deshielo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 82 -->
+        <div class="episode-item" id="btnEpisodio82" data-video="/Episodios/aot/Ep82.mp4">
+            <img src="/Episodios/aot/ep82.webp" alt="Episodio 82" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 82</h3>
+                <p>Ocaso</p>
+            </div>
+        </div>
+
+        <!-- Episodio 83 -->
+        <div class="episode-item" id="btnEpisodio83" data-video="/Episodios/aot/Ep83.mp4">
+            <img src="/Episodios/aot/ep83.webp" alt="Episodio 83" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 83</h3>
+                <p>Orgullo</p>
+            </div>
+        </div>
+
+        <!-- Episodio 84 -->
+        <div class="episode-item" id="btnEpisodio84" data-video="/Episodios/aot/Ep84.mp4">
+            <img src="/Episodios/aot/ep84.webp" alt="Episodio 84" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 84</h3>
+                <p>La noche del fin</p>
+            </div>
+        </div>
+
+        <!-- Episodio 85 -->
+        <div class="episode-item" id="btnEpisodio85" data-video="/Episodios/aot/Ep85.mp4">
+            <img src="/Episodios/aot/ep85.webp" alt="Episodio 85" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 85</h3>
+                <p>Traidores</p>
+            </div>
+        </div>
+
+        <!-- Episodio 86 -->
+        <div class="episode-item" id="btnEpisodio86" data-video="/Episodios/aot/Ep86.mp4">
+            <img src="/Episodios/aot/ep86.webp" alt="Episodio 86" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 86</h3>
+                <p>Retrospectiva</p>
+            </div>
+        </div>
+
+        <!-- Episodio 87 -->
+        <div class="episode-item" id="btnEpisodio87" data-video="/Episodios/aot/Ep87.mp4">
+            <img src="/Episodios/aot/ep87.webp" alt="Episodio 87" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 87</h3>
+                <p>El amanecer de la humanidad</p>
+            </div>
+        </div>
+
+
+            <!-- El cartel de "TEMPORADA 1" y tu lista de episodios continúan abajo normalmente -->
+        <div id="temporada0" class="season-separator-card">
+            <h2>Temporada Final</h2>
+            <div class="separator-line"></div>
+        </div>
+
+
+        <!-- Episodio 88 -->
+        <div class="episode-item" id="btnEpisodio88" data-video="/Episodios/aot/Ep88.mp4">
+            <img src="/Episodios/aot/ep88.webp" alt="Episodio 88" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 87</h3>
+                <p>Capítulo Final - Especial 1</p>
+            </div>
+        </div>
+
+        <!-- Episodio 89 -->
+        <div class="episode-item" id="btnEpisodio89" data-video="/Episodios/aot/Ep89.mp4">
+            <img src="/Episodios/aot/ep89.webp" alt="Episodio 89" class="episode-thumb">
+            <div class="episode-info">
+                <h3>Episodio 89</h3>
+                <p>Capítulo Final - Especial 2</p>
+            </div>
+        </div>

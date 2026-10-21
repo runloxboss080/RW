@@ -1,0 +1,954 @@
+/* =====================================================
+   CONTENEDOR GENERAL
+   ===================================================== */
+
+.tienda-items-container {
+
+    padding: 30px;
+
+    margin-top: 120px;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   TÍTULO PRINCIPAL
+   ===================================================== */
+
+.tienda-title {
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 0 12px #00e0ff;
+
+}
+
+
+/* =====================================================
+   FILTROS
+   ===================================================== */
+
+.tienda-filtros {
+
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.tienda-filtros select {
+
+    padding: 10px 14px;
+
+    background: #111;
+
+    border: 1px solid #00e0ff;
+
+    border-radius: 10px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    box-shadow: 0 0 10px rgba(0,224,255,0.4);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR GENERAL DE LAS SECCIONES
+   ===================================================== */
+
+/*
+   IMPORTANTE:
+   Aquí NO usamos grid.
+
+   Esto hace que Demon Slayer esté arriba
+   y Ghostface aparezca debajo.
+*/
+
+.tienda-grid {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   CADA SECCIÓN
+   ===================================================== */
+
+.tienda-seccion {
+
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 70px;
+
+}
+
+
+/* =====================================================
+   TÍTULO DE CADA SECCIÓN
+   ===================================================== */
+
+.seccion-titulo {
+
+    width: 95%;
+
+    margin: 0 auto 25px auto;
+
+    padding-bottom: 10px;
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+    text-align: left;
+
+    border-bottom: 2px solid #00e0ff;
+
+    text-shadow: 0 0 12px #00e0ff;
+
+}
+
+
+/* =====================================================
+   GRID DE OBJETOS DENTRO DE CADA SECCIÓN
+   ===================================================== */
+
+/*
+   Aquí SÍ usamos grid.
+
+   Esto permite que los objetos estén
+   horizontalmente.
+
+   4 objetos por fila en pantallas grandes.
+*/
+
+.items-grid {
+
+    width: 95%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+    align-items: stretch;
+
+}
+
+/* =====================================================
+   CONTENEDOR GENERAL
+   ===================================================== */
+
+.tienda-items-container {
+
+    padding: 30px;
+
+    margin-top: 120px;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   TÍTULO PRINCIPAL
+   ===================================================== */
+
+.tienda-title {
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 0 12px #00e0ff;
+
+}
+
+
+/* =====================================================
+   FILTROS
+   ===================================================== */
+
+.tienda-filtros {
+
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.tienda-filtros select {
+
+    padding: 10px 14px;
+
+    background: #111;
+
+    border: 1px solid #00e0ff;
+
+    border-radius: 10px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    box-shadow: 0 0 10px rgba(0,224,255,0.4);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR GENERAL DE LAS SECCIONES
+   ===================================================== */
+
+/*
+   IMPORTANTE:
+   Aquí NO usamos grid.
+
+   Esto hace que Demon Slayer esté arriba
+   y Ghostface aparezca debajo.
+*/
+
+.tienda-grid {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   CADA SECCIÓN
+   ===================================================== */
+
+.tienda-seccion {
+
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 70px;
+
+}
+
+
+/* =====================================================
+   TÍTULO DE CADA SECCIÓN
+   ===================================================== */
+
+.seccion-titulo {
+
+    width: 95%;
+
+    margin: 0 auto 25px auto;
+
+    padding-bottom: 10px;
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+    text-align: left;
+
+    border-bottom: 2px solid #00e0ff;
+
+    text-shadow: 0 0 12px #00e0ff;
+
+}
+
+
+/* =====================================================
+   GRID DE OBJETOS DENTRO DE CADA SECCIÓN
+   ===================================================== */
+
+/*
+   Aquí SÍ usamos grid.
+
+   Esto permite que los objetos estén
+   horizontalmente.
+
+   4 objetos por fila en pantallas grandes.
+*/
+
+.items-grid {
+
+    width: 95%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+    align-items: stretch;
+
+}
+
+
+/* =====================================================
+   TARJETA
+   ===================================================== */
+
+.item-card {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+
+    transition: 0.25s;
+
+}
+
+
+/* =====================================================
+   EFECTO AL PASAR EL RATÓN
+   ===================================================== */
+
+.item-card:hover {
+
+    transform: scale(1.03);
+
+    box-shadow: 0 0 18px rgba(0,224,255,0.6);
+
+}
+
+
+/* =====================================================
+   IMAGEN
+   ===================================================== */
+
+
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
+
+.item-info {
+
+    margin-top: 10px;
+
+}
+
+
+.item-name {
+
+    margin: 5px 0;
+
+    font-size: 1.2rem;
+
+}
+
+
+.item-desc {
+
+    opacity: 0.8;
+
+    font-size: 0.9rem;
+
+    min-height: 40px;
+
+}
+
+
+.item-price {
+
+    margin-top: 8px;
+
+    font-weight: bold;
+
+    color: #00e0ff;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+   ===================================================== */
+
+.item-buy-btn {
+
+    margin-top: 12px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: #00e0ff;
+
+    color: #000;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.item-buy-btn:hover {
+
+    background: #00bcd4;
+
+    transform: scale(1.03);
+
+}
+
+
+/* =====================================================
+   TÍTULO DEMON SLAYER
+   ===================================================== */
+
+.demon-titulo {
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================================
+   TÍTULO GHOSTFACE
+   ===================================================== */
+
+.ghostface-titulo {
+
+    margin-top: 60px;
+
+}
+
+
+/* =====================================================
+   SIN RESULTADOS
+   ===================================================== */
+
+.sin-resultados {
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    margin-top: 40px;
+
+}
+
+
+/* =====================================================
+   MODAL DE IMAGEN AMPLIADA
+   ===================================================== */
+
+
+
+
+/* =====================================================
+   IMAGEN AMPLIADA
+   ===================================================== */
+
+
+
+/* =====================================================
+   ANIMACIÓN MODAL
+   ===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        transform: scale(0.8);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =====================================================
+   CERRAR MODAL
+   ===================================================== */
+
+.cerrar-modal {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 40px;
+
+    color: #00e0ff;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.cerrar-modal:hover {
+
+    color: #fff;
+
+    transform: scale(1.2);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+
+/* -----------------------------------------------
+   PANTALLAS MEDIANAS
+   ----------------------------------------------- */
+
+@media (max-width: 1200px) {
+
+    .items-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* -----------------------------------------------
+   TABLETS
+   ----------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .items-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* -----------------------------------------------
+   MÓVILES
+   ----------------------------------------------- */
+
+@media (max-width: 550px) {
+
+    .tienda-items-container {
+
+        padding: 15px;
+
+    }
+
+
+    .tienda-filtros {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .tienda-filtros select {
+
+        width: 90%;
+
+    }
+
+
+    .items-grid {
+
+        grid-template-columns: 1fr;
+
+        width: 95%;
+
+    }
+
+
+    .seccion-titulo {
+
+        width: 95%;
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .item-img {
+
+        height: 200px;
+
+    }
+
+}
+
+
+/* =====================================================
+   EFECTO AL PASAR EL RATÓN
+   ===================================================== */
+
+.item-card:hover {
+
+    transform: scale(1.03);
+
+    box-shadow: 0 0 18px rgba(0,224,255,0.6);
+
+}
+
+
+/* =====================================================
+   IMAGEN
+   ===================================================== */
+
+.item-img {
+width: 100%;
+height: 260px;
+object-fit: contain;
+border-radius: 10px;
+display: block;
+background: #111;
+}
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
+
+.item-info {
+
+    margin-top: 10px;
+
+}
+
+
+.item-name {
+
+    margin: 5px 0;
+
+    font-size: 1.2rem;
+
+}
+
+
+.item-desc {
+
+    opacity: 0.8;
+
+    font-size: 0.9rem;
+
+    min-height: 40px;
+
+}
+
+
+.item-price {
+
+    margin-top: 8px;
+
+    font-weight: bold;
+
+    color: #00e0ff;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+   ===================================================== */
+
+.item-buy-btn {
+
+    margin-top: 12px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    background: #00e0ff;
+
+    color: #000;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.item-buy-btn:hover {
+
+    background: #00bcd4;
+
+    transform: scale(1.03);
+
+}
+
+
+/* =====================================================
+   TÍTULO DEMON SLAYER
+   ===================================================== */
+
+.demon-titulo {
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================================
+   TÍTULO GHOSTFACE
+   ===================================================== */
+
+.ghostface-titulo {
+
+    margin-top: 60px;
+
+}
+
+
+/* =====================================================
+   SIN RESULTADOS
+   ===================================================== */
+
+.sin-resultados {
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    margin-top: 40px;
+
+}
+
+
+/* =====================================================
+   MODAL DE IMAGEN AMPLIADA
+   ===================================================== */
+
+
+
+
+/* =====================================================
+   IMAGEN AMPLIADA
+   ===================================================== */
+
+
+
+/* =====================================================
+   ANIMACIÓN MODAL
+   ===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        transform: scale(0.8);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =====================================================
+   CERRAR MODAL
+   ===================================================== */
+
+
+
+
+.cerrar-modal:hover {
+
+    color: #fff;
+
+    transform: scale(1.2);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+
+/* -----------------------------------------------
+   PANTALLAS MEDIANAS
+   ----------------------------------------------- */
+
+@media (max-width: 1200px) {
+
+    .items-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* -----------------------------------------------
+   TABLETS
+   ----------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .items-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* -----------------------------------------------
+   MÓVILES
+   ----------------------------------------------- */
+
+@media (max-width: 550px) {
+
+    .tienda-items-container {
+
+        padding: 15px;
+
+    }
+
+
+    .tienda-filtros {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .tienda-filtros select {
+
+        width: 90%;
+
+    }
+
+
+    .items-grid {
+
+        grid-template-columns: 1fr;
+
+        width: 95%;
+
+    }
+
+
+    .seccion-titulo {
+
+        width: 95%;
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .item-img {
+
+        height: 200px;
+
+    }
+
+}
+
+#videoAmpliado {
+width: 600px;
+max-width: 90vw;
+
+height: auto;
+
+border-radius: 12px;
+
+box-shadow: 0 0 25px rgba(0,224,255,0.8);
+}

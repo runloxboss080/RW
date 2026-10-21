@@ -1,0 +1,78 @@
+/* Banner */
+.episode-banner {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #ff6600;
+}
+
+/* Contenedor */
+.episode-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Título */
+.episode-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Lista de episodios */
+.episode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cada episodio */
+.episode-item {
+    display: flex;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.episode-item:hover {
+    transform: scale(1.02);
+}
+
+/* Miniatura */
+.episode-thumb {
+    width: 180px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Info */
+.episode-info {
+    padding: 10px;
+}
+
+.episode-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.episode-info p {
+    margin: 5px 0 0;
+    color: #ccc;
+}
+
+/* Botón volver */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: #ff6600;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
